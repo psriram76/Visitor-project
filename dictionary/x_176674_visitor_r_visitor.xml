@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Visitor" max_length="40" name="x_176674_visitor_r_visitor" type="collection">
+        <element label="Are you Parked On-Site?" max_length="40" name="are_you_parked_on_site" type="boolean"/>
+        <element label="Company" max_length="40" name="company" type="string"/>
+        <element label="First Name" max_length="40" name="first_name" type="string"/>
+        <element label="Last Name" max_length="40" name="last_name" type="string"/>
+        <element label="License Plate Number" max_length="40" name="license_plate_number" type="string"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element default="True" label="on-Site" max_length="40" name="on_site" type="boolean"/>
+        <element display="true" label="Picture" max_length="40" name="picture" type="user_image"/>
+        <element label="Who are you to see here?" max_length="32" name="who_are_you_to_see_here" reference="sys_user" type="reference"/>
+        <index name="index">
+            <element name="who_are_you_to_see_here"/>
+        </index>
+    </element>
+</database>
